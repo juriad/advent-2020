@@ -1,0 +1,60 @@
+local f = file("input","r");
+
+local inp = [];
+local n = 0;
+
+while(! f.eos()) {
+	local c = f.readn('c');
+	if (c >= 48 && c <= 57) {
+		n = n * 10 + (c - 48);
+	} else {
+		inp.append(n);
+		n = 0;
+	}
+}
+f.close();
+
+inp.sort();
+
+function sum(target, banned) {
+	local a = 0;
+	local b = inp.len() - 1;
+
+	while (a < b) {
+		local c =inp[a] + inp[b]
+		if (c == target) {
+			return [inp[a], inp[b]];
+		} else if (c < target) {
+			a++;
+			if (a == banned) a++;
+		} else {
+			b--;
+			if (b == banned) b--;
+		}
+	}
+	return null;
+}
+
+function printSolution(arr) {
+	local p = 1;
+	foreach(i,a in arr) {
+		if (i > 0) {
+			print(" * ");
+		}
+		p = p * a;
+		print(a)
+	}
+	print("  = " + p + "\n")
+}
+
+local ab = sum(2020, -1)
+printSolution(ab);
+
+foreach (c,cval in inp) {
+	local ab = sum(2020 - cval, c);
+	if (ab != null) {
+		ab.append(cval)
+		printSolution(ab)
+		break;
+	}
+}
