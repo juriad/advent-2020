@@ -16,3 +16,11 @@ It certainly is and thanks to single-letter command names, the solution is even 
 
 The task was mostly about organizing the input so that we could work with two consecutive characters.
 Working with unary system was crucial and conversion between unary and decimal numbers was tedious.
+
+## Day 3 - TCL
+
+Very powerful minimalistic language; I like its rawness.
+It has pretty good documentation with examples.
+
+I was hoping that the second part of the task would be search for minimum over all slopes.
+Maybe in some later task...
