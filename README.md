@@ -34,7 +34,13 @@ so I had to look up everything in documentation or tutorials instead of relying 
 
 Task was easy; the second part had me learn pointers to functions, anonymous function in D which was much nicer than in C.
 
+## Day 5 - Forth
 
+I have read a lot about this minimalistic language, so I wanted to try it.
+It is quite interesting to design a stack based program, although it was a mind-fuck from time to time.
+
+The task would have been easy in any language.
+The second part was very expected.
 
 # Language Pool
 
@@ -42,7 +48,6 @@ Bash
 C++
 Cobol
 Eiffel
-Forth
 Java
 Joy
 Mercury
