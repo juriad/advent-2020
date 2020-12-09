@@ -49,9 +49,17 @@ Lisp/Scheme-like language which has pretty nice editor (`drrocket`), although it
 The task was easily solved after finding out that the language has set operations (union and intersect).
 A minor issue was that it does not have `fold1`.
 
+## Day 7 - Bash
+
+This finally forced me to learn bash extensions of Shell: arrays, associative arrays, namerefs.
+
+Graph traversal was easy in the end.
+I was worried that there would be cycles present and algorithm would have to be more complex, maybe later.
+I remember a similar task from last(?) year. 
+
+
 # Language Pool
 
-Bash
 C++
 Cobol
 Eiffel
