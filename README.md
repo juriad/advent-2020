@@ -42,6 +42,13 @@ It is quite interesting to design a stack based program, although it was a mind-
 The task would have been easy in any language.
 The second part was very expected.
 
+## Day 6 - Racket
+
+Lisp/Scheme-like language which has pretty nice editor (`drrocket`), although it could have better integrated documentation.
+
+The task was easily solved after finding out that the language has set operations (union and intersect).
+A minor issue was that it does not have `fold1`.
+
 # Language Pool
 
 Bash
@@ -55,7 +62,6 @@ Oberon
 Perl
 PostScript
 R
-Racket
 Scala
 Scratch
 Smalltalk
