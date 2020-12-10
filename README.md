@@ -57,11 +57,18 @@ Graph traversal was easy in the end.
 I was worried that there would be cycles present and algorithm would have to be more complex, maybe later.
 I remember a similar task from last(?) year. 
 
+## Day 8 - Cobol
+
+Another ancient language crossed from my list, and I don't want to see it ever again.
+Cobol is so verbose, so weirdly structured.
+I chose it because I dod not need dynamic allocation of memory for this task.
+
+It was mostly about battling the language and reading documentation and forums mentioning mainframes.
+I hope there won't bet too many virtual machine tasks as last year.
 
 # Language Pool
 
 C++
-Cobol
 Eiffel
 Java
 Joy
