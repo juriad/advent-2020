@@ -66,6 +66,15 @@ I chose it because I dod not need dynamic allocation of memory for this task.
 It was mostly about battling the language and reading documentation and forums mentioning mainframes.
 I hope there won't bet too many virtual machine tasks as last year.
 
+## Day 9 - SQL
+
+SQL is quite powerful, it is easy to emulate for loops.
+Since the input can be considered a CSV, even loading data was easy.
+And even better, sqlite can run in memory, so the computation does not need nor leave an existing database.
+
+Fortunately the task was easy enough to be solved using a couple iterations over tables.
+The only clever algorithm was to precompute prefix sums.
+
 # Language Pool
 
 C++
@@ -80,7 +89,6 @@ R
 Scala
 Scratch
 Smalltalk
-SQL
 TeX
 Vala
 Vim Script
