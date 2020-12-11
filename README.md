@@ -75,6 +75,15 @@ And even better, sqlite can run in memory, so the computation does not need nor 
 Fortunately the task was easy enough to be solved using a couple iterations over tables.
 The only clever algorithm was to precompute prefix sums.
 
+## Day 10 - Zig
+
+An interesting idea for making a language at the level of C but much safer.
+It has a nice concept of error handling.
+The doom of the language is documentation of its standard library which is bad: functions are missing or are undocumented.
+
+I could predict the second part and was looking for it.
+Dynamic programing made it trivial.
+
 # Language Pool
 
 C++
@@ -93,7 +102,6 @@ TeX
 Vala
 Vim Script
 XQuery
-Zig
 
 # Banned
 
