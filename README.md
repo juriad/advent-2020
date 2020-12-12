@@ -93,6 +93,14 @@ The trick with loading a file as CSV worked again.
 Language with vector operation turned to be great for this task.
 Apart from initial computation of `sees` matrix, the core functions `iter` and `conv` are ridiculously simple.
 
+## Day 12 - Vim Script
+
+Vim Script is good enough for its purpose, but nothing exciting to work with.
+It is interesting to mix the modes, interacting with the editor from the script.
+
+The task was simple so a single pass through the input data was enough.
+Most of the work was then making vim print to terminal and quit.
+
 # Language Pool
 
 C++
@@ -112,7 +120,6 @@ Scratch
 Smalltalk
 TeX
 Vala
-Vim Script
 
 # Banned
 
