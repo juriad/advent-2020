@@ -84,25 +84,37 @@ The doom of the language is documentation of its standard library which is bad: 
 I could predict the second part and was looking for it.
 Dynamic programing made it trivial.
 
+## Day 11 - R
+
+R is relatively pleasant, has decent documentation, and variety of high-level data types.
+I had bad experience many years ago with R when we needed to run a simulation, but it was much better this time.
+The trick with loading a file as CSV worked again.
+
+Language with vector operation turned to be great for this task.
+Apart from initial computation of `sees` matrix, the core functions `iter` and `conv` are ridiculously simple.
+
 # Language Pool
 
 C++
+Crystal
 Eiffel
+Goby
 Java
 Joy
 Mercury
 Oberon
 Perl
+Pony
 PostScript
-R
+Red
 Scala
 Scratch
 Smalltalk
 TeX
 Vala
 Vim Script
-XQuery
 
 # Banned
 
 Self - does not have 64bit distribution
+XQuery - not powerful enough
