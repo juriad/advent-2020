@@ -101,10 +101,18 @@ It is interesting to mix the modes, interacting with the editor from the script.
 The task was simple so a single pass through the input data was enough.
 Most of the work was then making vim print to terminal and quit.
 
+## Day 13 - Crystal
+
+A compilable Ruby.
+It has quite a bit chaotic documentation of the language but a usable documentation of the standard library (looking at you Zig).
+Luckily the language supports easy work with big numbers.
+
+I was looking forward to some number theory.
+The task is easy once it is clear once restarted in modular arithmetics.
+
 # Language Pool
 
 C++
-Crystal
 Eiffel
 Goby
 Java
@@ -112,7 +120,6 @@ Joy
 Mercury
 Oberon
 Perl
-Pony
 PostScript
 Red
 Scala
@@ -125,3 +132,4 @@ Vala
 
 Self - does not have 64bit distribution
 XQuery - not powerful enough
+Pony - ld: unrecognised emulation mode: cx16
