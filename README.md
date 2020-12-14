@@ -110,26 +110,32 @@ Luckily the language supports easy work with big numbers.
 I was looking forward to some number theory.
 The task is easy once it is clear once restarted in modular arithmetics.
 
+## Day 14 - Perl
+
+Again a language which I was a bit familiar with.
+I am quite uncomfortable with Perl; it does not have proper parameters of subs, it has contexts, different comparison operators for numbers and strings.  
+
+When implementing the second part I was a bit worried that the memory won't be sufficient and a different representation would be necessary.
+
 # Language Pool
 
-C++
-Eiffel
-Goby
-Java
-Joy
-Mercury
-Oberon
-Perl
-PostScript
-Red
-Scala
-Scratch
-Smalltalk
-TeX
-Vala
+* C++
+* Eiffel
+* Goby
+* Java
+* Joy
+* Mercury
+* PostScript
+* Red
+* Scala
+* Scratch
+* Smalltalk
+* TeX
+* Vala
 
 # Banned
 
-Self - does not have 64bit distribution
-XQuery - not powerful enough
-Pony - ld: unrecognised emulation mode: cx16
+* Self - does not have 64bit distribution
+* XQuery - not powerful enough
+* Pony - ld: unrecognised emulation mode: cx16
+* Oberon - not exactly a language, it is an operating system
