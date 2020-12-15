@@ -117,6 +117,14 @@ I am quite uncomfortable with Perl; it does not have proper parameters of subs, 
 
 When implementing the second part I was a bit worried that the memory won't be sufficient and a different representation would be necessary.
 
+## Day 15 - Red
+
+Red is a pretty ugly language and inherits it from Rebol.
+The documentation is not terrible but naming array access words `pick` and `poke` makes them hard to find.
+
+I assumed that I will need to keep information about number's last position instead of always searching again.
+Even that however was not enough to run at a reasonable speed (the task takes 35 seconds). 
+
 # Language Pool
 
 * C++
@@ -126,7 +134,6 @@ When implementing the second part I was a bit worried that the memory won't be s
 * Joy
 * Mercury
 * PostScript
-* Red
 * Scala
 * Scratch
 * Smalltalk
