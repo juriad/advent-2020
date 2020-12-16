@@ -123,18 +123,24 @@ Red is a pretty ugly language and inherits it from Rebol.
 The documentation is not terrible but naming array access words `pick` and `poke` makes them hard to find.
 
 I assumed that I will need to keep information about number's last position instead of always searching again.
-Even that however was not enough to run at a reasonable speed (the task takes 35 seconds). 
+Even that however was not enough to run at a reasonable speed (the task takes 35 seconds).
+
+## Day 16 - Mercury
+
+Mercury is very similar to Prolog, just has more options and is safer.
+The documentation is pretty good, maybe could have more examples.
+I spent most of the time fighting the language rather than the solving the task.
+
+The second part could have been harder, I was preparing to implement all-distinct predicate using some advanced techniques, but that was not needed.
+Overall nice task, but way too much parsing using language which is not meant for it (if this was two days ago...) 
 
 # Language Pool
 
 * C++
 * Eiffel
 * Goby
-* Java
 * Joy
-* Mercury
 * PostScript
-* Scala
 * Scratch
 * Smalltalk
 * TeX
@@ -146,3 +152,5 @@ Even that however was not enough to run at a reasonable speed (the task takes 35
 * XQuery - not powerful enough
 * Pony - ld: unrecognised emulation mode: cx16
 * Oberon - not exactly a language, it is an operating system
+* Java - JVM languages will be next year
+* Scala - JVM languages will be next year
