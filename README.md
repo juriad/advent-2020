@@ -132,13 +132,19 @@ The documentation is pretty good, maybe could have more examples.
 I spent most of the time fighting the language rather than the solving the task.
 
 The second part could have been harder, I was preparing to implement all-distinct predicate using some advanced techniques, but that was not needed.
-Overall nice task, but way too much parsing using language which is not meant for it (if this was two days ago...) 
+Overall nice task, but way too much parsing using language which is not meant for it (if this was two days ago...)
+
+## Day 17 - Eiffel
+
+Eiffel is very interesting language; it has features which are later available in Java.
+I even quite liked the syntax, just commas were problematic.
+
+Game of Life in multiple dimensions - rather easy but hard to generalize to variable number of dimensions without huge repeats in the code. 
+The language seems slow as the task took 47 seconds. 
 
 # Language Pool
 
 * C++
-* Eiffel
-* Goby
 * Joy
 * PostScript
 * Scratch
@@ -154,3 +160,4 @@ Overall nice task, but way too much parsing using language which is not meant fo
 * Oberon - not exactly a language, it is an operating system
 * Java - JVM languages will be next year
 * Scala - JVM languages will be next year
+* Goby - Does not have documentation (404)
