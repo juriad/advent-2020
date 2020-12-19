@@ -140,13 +140,22 @@ Eiffel is very interesting language; it has features which are later available i
 I even quite liked the syntax, just commas were problematic.
 
 Game of Life in multiple dimensions - rather easy but hard to generalize to variable number of dimensions without huge repeats in the code. 
-The language seems slow as the task took 47 seconds. 
+The language seems slow as the task took 47 seconds.
+
+## Day 18 - PostScript
+
+PostScript is another of old languages; it is pretty comfortable to work with it.
+I missed more commands for operations with the stack (like Forth has).
+It does not have a great documentation; this is the best list of commands that I found: http://www.math.ubc.ca/~cass/courses/ps.html
+
+The task was interesting.
+The stack-based language was a good fit for it.
+The second part was not very hard but revealed couple errors.
 
 # Language Pool
 
 * C++
 * Joy
-* PostScript
 * Scratch
 * Smalltalk
 * TeX

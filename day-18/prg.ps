@@ -1,0 +1,108 @@
+/N 10 def
+/S 32 def
+/O 40 def
+/C 41 def
+/T 42 def
+/P 43 def
+/Z 48 def
+
+% /ADVANCED true def
+
+
+/f (%stdin) (r) file def
+
+/digit {
+    {
+        count 1 eq {
+            exit
+        } if
+
+        exch
+
+        dup O eq {
+            exch
+            exit
+        } if % open paren
+
+        dup P eq {
+            pop
+            add
+            exit
+        } if % perform plus
+
+        dup T eq {
+            ADVANCED {
+                exch
+            } {
+                pop
+                mul
+            } ifelse
+            exit
+        } if % perform mul
+
+        exit
+    } loop
+} def
+
+/prod {
+    {
+        count 1 eq {
+            exit
+        } if
+
+        exch
+
+        dup T ne {
+            exch
+            exit
+        } if % not times before
+
+        pop
+        mul
+    } loop
+} def
+
+/close {
+    prod
+    exch
+    pop
+    digit
+} def
+
+/S 0 def
+
+{
+    f read % char bool
+
+    not {
+        exit
+    } if % end loop
+
+    /c exch def % char
+
+    c S eq {
+    } if % skip if space
+
+    c Z ge {
+        c Z sub
+        digit
+    } if % digit
+
+    c T eq c P eq or c O eq or {
+        c
+    } if % times, plus, or open paren
+
+    c C eq {
+        close
+    } if % close paren
+
+    c N eq {
+        prod
+%        (result = ) print
+%        dup =
+        /S exch S add def
+    } if % newline
+} loop
+
+S =
+quit
