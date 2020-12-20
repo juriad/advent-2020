@@ -152,13 +152,25 @@ The task was interesting.
 The stack-based language was a good fit for it.
 The second part was not very hard but revealed couple errors.
 
+## Day 19 - Objective-C
+
+Objective-C is weird, it is like two languages with different syntax.
+Objective part uses brackets, colons and no commas.
+
+The task was harder than it looked.
+If only I could use Prolog, it would all be much easier.
+The hardest part was to implement restart (failures) while proceeding in matching.
+
+
 # Language Pool
 
 * C++
 * Joy
 * Scratch
 * Smalltalk
+* Swift
 * TeX
+* TypeScript
 * Vala
 
 # Banned
