@@ -161,17 +161,24 @@ The task was harder than it looked.
 If only I could use Prolog, it would all be much easier.
 The hardest part was to implement restart (failures) while proceeding in matching.
 
+## Day 20 - Vala
+
+Some say that Vala is not a real language because it just wraps C and Glib.
+Nevertheless, it is very comfortable to program in it as it has a nice high-level modern syntax based on C#.  
+
+This task was different because it needed implementation of many steps:  parsing, corner finding, orientating, stitching, monster finding.
+I am happy that I chose an easy language and spent time on the algorithms rater than fighting the syntax.
 
 # Language Pool
 
 * C++
+* Genie
 * Joy
 * Scratch
 * Smalltalk
 * Swift
 * TeX
 * TypeScript
-* Vala
 
 # Banned
 
