@@ -169,13 +169,21 @@ Nevertheless, it is very comfortable to program in it as it has a nice high-leve
 This task was different because it needed implementation of many steps:  parsing, corner finding, orientating, stitching, monster finding.
 I am happy that I chose an easy language and spent time on the algorithms rater than fighting the syntax.
 
+## Day 21 - C++
+
+C++ is as good/bad as it always was.
+I was surprised I did not encounter any segfaults, but that is probably because of preferring references in most places.
+The standard library is evolving slowly, but it stills lacks trivial operations such as splitting a string.
+
+The task was easy enough once I started parsing the input.
+I intended to go object oriented way with modeling the task with classes - that is still there.
+However, during input parsing, it was too tempting to run some intersection and deduplication and by mistake solve the second task before the first one.
+
 # Language Pool
 
-* C++
 * Genie
 * Joy
 * Scratch
-* Smalltalk
 * Swift
 * TeX
 * TypeScript
@@ -189,3 +197,4 @@ I am happy that I chose an easy language and spent time on the algorithms rater 
 * Java - JVM languages will be next year
 * Scala - JVM languages will be next year
 * Goby - Does not have documentation (404)
+* Smalltalk - Could start GUI but could not do anything; poor documentation maybe
