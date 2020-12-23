@@ -179,11 +179,22 @@ The task was easy enough once I started parsing the input.
 I intended to go object oriented way with modeling the task with classes - that is still there.
 However, during input parsing, it was too tempting to run some intersection and deduplication and by mistake solve the second task before the first one.
 
+## Day 22 - Powershell
+
+Slowly running out of languages.
+Powershell is an interesting shell because it is object oriented.
+It has very little in common with traditional shells such as Bash.
+
+The first part of the task was easy.
+The second part required a major rework to simplify passing decks of cards into recursion.
+Also, to detect cycles, I implemented a trivial hashing solution which works well enough.
+I was looking long for a bug and of course it was off-by-one in deck duplication.
+
 # Language Pool
 
+* ActionScript
 * Genie
 * Joy
-* Scratch
 * Swift
 * TeX
 * TypeScript
@@ -198,3 +209,6 @@ However, during input parsing, it was too tempting to run some intersection and 
 * Scala - JVM languages will be next year
 * Goby - Does not have documentation (404)
 * Smalltalk - Could start GUI but could not do anything; poor documentation maybe
+* Scratch, Snap! - Cannot be run from a command line
+* Oz, Mozart - incompatible with Boost 1.7
+* FoxPro  - not for Linux
