@@ -190,12 +190,20 @@ The second part required a major rework to simplify passing decks of cards into 
 Also, to detect cycles, I implemented a trivial hashing solution which works well enough.
 I was looking long for a bug and of course it was off-by-one in deck duplication.
 
+## Day 23 - Swift
+
+Swift is a great improvement to Objective-C.
+It if fairly modern language with nice features.
+
+The first part was easy, unfortunately I mispredicted the second part.
+My original implementation used arrays which did not scale to big games.
+Changing it linked beads also made me learn the object-oriented part of the language.
+
 # Language Pool
 
 * ActionScript
 * Genie
 * Joy
-* Swift
 * TeX
 * TypeScript
 
