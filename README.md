@@ -199,6 +199,15 @@ The first part was easy, unfortunately I mispredicted the second part.
 My original implementation used arrays which did not scale to big games.
 Changing it linked beads also made me learn the object-oriented part of the language.
 
+## Day 24 - UCBLogo
+
+I was probably naive to choose Logo for this day.
+The language is not very well suited, but it seemed that it had good enough data structures.
+The syntax also becomes quite pleasant after some time (calling procedures in Haskell style).
+
+The task took longer due to Christmas celebration and because of slowness of the language.
+I implemented couple versions until I could make the second part finish in a reasonable time of 13 minutes. 
+
 # Language Pool
 
 * ActionScript

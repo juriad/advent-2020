@@ -1,0 +1,167 @@
+OPENREAD FIRST :COMMAND.LINE
+SETREAD FIRST :COMMAND.LINE
+
+MAKE "X 0
+MAKE "Y 0
+
+TO REMARK :G :X :Y :V
+    PPROP (WORD "G :G "\  :X) :Y :V
+END
+
+TO MARKED :G :X :Y
+    OUTPUT (GPROP (WORD "G :G "\  :X) :Y) = "true
+END
+
+TO UNKNOWN :G :X :Y
+    OUTPUT EMPTYP (GPROP (WORD "G :G "\  :X) :Y)
+END
+
+TO DISCARD.TILES :G
+    FOREACH (LAST PLISTS) [
+        MAKE "PL ?
+        IF [ SUBSTRINGP (WORD "G :G "\ ) :PL ] [
+            ERPL :PL
+        ]
+    ]
+END
+
+TO FOREACH.TILE.INNER :PL :PRG
+    FOREACH (PLIST :PL) [
+        MAKE "T ?
+        IF [ (MODULO # 2) = 1 ] [
+            (INVOKE :PRG :PL :T (GPROP :PL :T))
+        ]
+    ]
+END
+
+TO FOREACH.TILE :G :PRG
+    FOREACH (LAST PLISTS) [
+        MAKE "PL ?
+        IF [ SUBSTRINGP (WORD "G :G "\ ) :PL ] [
+            FOREACH.TILE.INNER :PL :PRG
+        ]
+    ]
+END
+
+TO PRUNE.UNMARKED :G
+    FOREACH.TILE :G [[PL T V]
+        IF [ :V = "false ] [
+            REMPROP :PL :T
+        ]
+    ]
+END
+
+TO COUNT.TILES :G
+    LOCALMAKE "S 0
+    FOREACH.TILE :G [
+        MAKE "S (:S + 1)
+    ]
+    OUTPUT :S
+END
+
+DO.UNTIL [
+    MAKE "C READCHAR
+
+    COND [
+        [[:C = "w]
+            MAKE "X (:X - 2)
+        ]
+        [[:C = "e]
+            MAKE "X (:X + 2)
+        ]
+        [[:C = "n]
+            MAKE "Y (:Y + 1)
+            MAKE "C READCHAR
+            IFELSE [:C = "e] [
+                MAKE "X (:X + 1)
+            ] [
+                MAKE "X (:X - 1)
+            ]
+        ]
+        [[:C = "s]
+            MAKE "Y (:Y - 1)
+            MAKE "C READCHAR
+            IFELSE [:C = "e] [
+                MAKE "X (:X + 1)
+            ] [
+                MAKE "X (:X - 1)
+            ]
+        ]
+        [[NOT (EMPTYP :C)]
+            REMARK 0 :X :Y (NOT (MARKED 0 :X :Y))
+
+            MAKE "X 0
+            MAKE "Y 0
+        ]
+    ]
+] [EMPTYP :C]
+
+PRUNE.UNMARKED 0
+PRINT COUNT.TILES 0
+
+
+
+
+TO AROUND :G :X :Y
+    MAKE "S 0
+    IF [MARKED :G (:X - 2) :Y] [
+        MAKE "S (:S + 1)
+    ]
+    IF [MARKED :G (:X - 1) (:Y + 1)] [
+        MAKE "S (:S + 1)
+    ]
+    IF [MARKED :G (:X + 1) (:Y + 1)] [
+        MAKE "S (:S + 1)
+    ]
+    IF [MARKED :G (:X + 2) :Y] [
+        MAKE "S (:S + 1)
+    ]
+    IF [MARKED :G (:X + 1) (:Y - 1)] [
+        MAKE "S (:S + 1)
+    ]
+    IF [MARKED :G (:X - 1) (:Y - 1)] [
+        MAKE "S (:S + 1)
+    ]
+    OUTPUT :S
+END
+
+TO UPDATE :G :X :Y
+    IF [UNKNOWN (:G + 1) :X :Y] [
+        LOCALMAKE "S (AROUND :G :X :Y)
+        IFELSE [MARKED :G :X :Y] [
+            REMARK (:G + 1) :X :Y OR (:S = 1) (:S = 2)
+        ] [
+            REMARK (:G + 1) :X :Y (:S = 2)
+        ]
+    ]
+END
+
+TO FOR.AROUND :G :X :Y
+    UPDATE :G (:X - 2) :Y
+    UPDATE :G (:X - 1) (:Y + 1)
+    UPDATE :G (:X + 1) (:Y + 1)
+    UPDATE :G (:X + 2) :Y
+    UPDATE :G (:X + 1) (:Y - 1)
+    UPDATE :G (:X - 1) (:Y - 1)
+END
+
+
+TO MOVE :G
+    FOREACH.TILE :G [[PL Y V] [
+        LOCALMAKE "GX (PARSE :PL)
+        LOCALMAKE "X (ITEM 2 :GX)
+
+        UPDATE :G :X :Y
+        FOR.AROUND :G :X :Y
+    ]]
+    DISCARD.TILES :G
+    PRUNE.UNMARKED (:G + 1)
+END
+
+REPEAT 100 [
+    MOVE (REPCOUNT - 1)
+    PRINT (SE REPCOUNT "\  (COUNT.TILES REPCOUNT))
+]
+
+
+BYE
