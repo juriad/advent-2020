@@ -206,11 +206,19 @@ The language is not very well suited, but it seemed that it had good enough data
 The syntax also becomes quite pleasant after some time (calling procedures in Haskell style).
 
 The task took longer due to Christmas celebration and because of slowness of the language.
-I implemented couple versions until I could make the second part finish in a reasonable time of 13 minutes. 
+I implemented couple versions until I could make the second part finish in a reasonable time of 13 minutes.
+
+## Day 25 - BC
+
+I wanted to use ActionScript to hold tribute to dying Flash, but I could not make it run.
+I switched to a language suited for the task which I had no idea that it supported loops and functions.
+Using BC only for arithmetics in bash is a waste of its potential.
+
+The task was obvious once finding that we are dealing with primes and reformulating to language of groups.
+Implementation of the algorithm was then rather straightforward.  
 
 # Language Pool
 
-* ActionScript
 * Genie
 * Joy
 * TeX
@@ -229,3 +237,4 @@ I implemented couple versions until I could make the second part finish in a rea
 * Scratch, Snap! - Cannot be run from a command line
 * Oz, Mozart - incompatible with Boost 1.7
 * FoxPro  - not for Linux
+* ActionScript - Cannot be downloaded

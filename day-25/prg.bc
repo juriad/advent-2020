@@ -1,0 +1,55 @@
+
+define pow(g, n, p) {
+    auto pp, acc
+
+    acc = 1
+    pp = g
+    while (p > 0) {
+        if (p % 2 == 1) {
+            acc = (acc * pp) % n
+        }
+        pp = (pp * pp) % n
+        p /= 2
+    }
+
+    return (acc)
+}
+
+define dlg(g, n, r) {
+    auto t[], gg, m, gm
+
+    m = sqrt(n) + 1
+
+    gg = 1
+    for (i = 0; i < m; i++) {
+        t[i] = gg
+        gg = (gg * g) % n
+    }
+
+    gm = pow(g, n, (n - m - 1))
+
+
+    gg = r
+    for (i = 0; i < m; i++) {
+        for (j = 0; j < m; j++) {
+            if (t[j] == gg) {
+                return i * m + j
+            }
+        }
+        gg = (gg * gm) % n
+    }
+
+    return (-1)
+}
+
+
+g = 7
+n = 20201227
+
+cpk = read()
+dpk = read()
+
+cls = dlg(g, n, cpk)
+dls = dlg(g, n, dpk)
+
+pow(g, n, cls * dls)
